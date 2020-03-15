@@ -1,0 +1,37 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+    default-init-method="init" default-destroy-method="destroy">
+
+    <bean id="DB" class="DBConnection" init-method="createDbConnection" destroy-method="closeConnection">
+        <property name="dbUrl" value="jdbc:mysql://localhost:3306?dbName"></property>
+        <property name="dbUsername" value="root"></property>
+        <property name="dbPassword" value="root"></property>
+    </bean>
+
+    <bean	id="user1" class="Clients"  scope="singleton">
+        <constructor-arg name="name" value="Vlad"></constructor-arg>
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="mtype" value="Regular"></constructor-arg>
+    </bean>
+
+    <bean	id="user2" class="Clients" scope="singleton">
+        <constructor-arg name="name" value="Sasha"></constructor-arg>
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="mtype" value="Premium"></constructor-arg>
+    </bean>
+    <bean	id="user3" class="Clients" scope="singleton">
+        <constructor-arg name="name" value="Yuri"></constructor-arg>
+        <constructor-arg name="id" value="3"></constructor-arg>
+        <constructor-arg name="mtype" value="Gold"></constructor-arg>
+    </bean>
+
+    <bean	id="user4" class="Clients" scope="singleton">
+        <constructor-arg name="name" value="Dima"></constructor-arg>
+        <constructor-arg name="id" value="4"></constructor-arg>
+        <constructor-arg name="mtype" value="Silver"></constructor-arg>
+    </bean>
+
+
+</beans>
